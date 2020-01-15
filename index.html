@@ -196,20 +196,20 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+    <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
   </head>
 
   <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="images/logo-1e815a84.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="ruby">ruby</a>
@@ -225,19 +225,71 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#the-user-object" class="toc-h2 toc-link" data-title="The user object">The user object</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#create-a-user" class="toc-h2 toc-link" data-title="Create a user">Create a user</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#retrieve-a-user" class="toc-h2 toc-link" data-title="Retrieve a user">Retrieve a user</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-user" class="toc-h2 toc-link" data-title="Update a user">Update a user</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-user" class="toc-h2 toc-link" data-title="Delete a user">Delete a user</a>
+                  </li>
+                  <li>
+                    <a href="#list-all-users" class="toc-h2 toc-link" data-title="List all users">List all users</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#valets" class="toc-h1 toc-link" data-title="Valets">Valets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-valet-object" class="toc-h2 toc-link" data-title="The valet object">The valet object</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-valet" class="toc-h2 toc-link" data-title="Create a valet">Create a valet</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-valet" class="toc-h2 toc-link" data-title="Retrieve a valet">Retrieve a valet</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-valet" class="toc-h2 toc-link" data-title="Update a valet">Update a valet</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-valet" class="toc-h2 toc-link" data-title="Delete a valet">Delete a valet</a>
+                  </li>
+                  <li>
+                    <a href="#list-all-valets" class="toc-h2 toc-link" data-title="List all valets">List all valets</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#bookings" class="toc-h1 toc-link" data-title="Bookings">Bookings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-booking-object" class="toc-h2 toc-link" data-title="The booking object">The booking object</a>
+                  </li>
+                  <li>
+                    <a href="#create-a-booking" class="toc-h2 toc-link" data-title="Create a booking">Create a booking</a>
+                  </li>
+                  <li>
+                    <a href="#retrieve-a-booking" class="toc-h2 toc-link" data-title="Retrieve a booking">Retrieve a booking</a>
+                  </li>
+                  <li>
+                    <a href="#update-a-booking" class="toc-h2 toc-link" data-title="Update a booking">Update a booking</a>
+                  </li>
+                  <li>
+                    <a href="#delete-a-booking" class="toc-h2 toc-link" data-title="Delete a booking">Delete a booking</a>
+                  </li>
+                  <li>
+                    <a href="#list-all-bookings" class="toc-h2 toc-link" data-title="List all bookings">List all bookings</a>
                   </li>
               </ul>
           </li>
@@ -254,184 +306,819 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
-
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
+<p>Welcome to AirValet Internal API. This is the main api for both the mobile app and web app.</p>
+<h1 id='users'>Users</h1>
 <blockquote>
-<p>To authorize, use this code:</p>
+<p>Endpoints:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
+<pre class="highlight javascript tab-javascript"><code>     <span class="nx">GET</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">users</span>
+    <span class="nx">POST</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">users</span>
+     <span class="nx">GET</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">users</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+     <span class="nx">PUT</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">users</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+  <span class="nx">DELETE</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">users</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
 </code></pre>
+<p>The <code>User</code> object is the base object of the app. All requests will require a userId to compelete</p>
+<h2 id='the-user-object'>The user object</h2>
 <blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>A sample response for a user object:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"brittanyklepfer@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GXivgijQFAU39g"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29c49a0fd25ba30f24889b1a5857399b5a5be90d2f042e7d87ff8eda5bea319d"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
+</span></code></pre><h3 id='attributes'>Attributes</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>_id</code> String</td>
+<td>Unique identifier for the user object.</td>
+</tr>
+<tr>
+<td><code>customerId</code> String</td>
+<td>Unique identifier for stripe object.</td>
+</tr>
+<tr>
+<td><code>first_name</code> String</td>
+<td>user&#39;s first name.</td>
+</tr>
+<tr>
+<td><code>last_name</code> String</td>
+<td>user&#39;s last name.</td>
+</tr>
+<tr>
+<td><code>email</code> String</td>
+<td>user&#39;s email address.</td>
+</tr>
+<tr>
+<td><code>phone</code> String</td>
+<td>user&#39;s phone number.</td>
+</tr>
+<tr>
+<td><code>deviceToken</code> String</td>
+<td>unique identifier for the device the user is using.</td>
+</tr>
+<tr>
+<td><code>createdAt</code> Date</td>
+<td>time user object was created</td>
+</tr>
+<tr>
+<td><code>updatedAt</code> Date</td>
+<td>time user object was last updated</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-user'>Create a user</h2>
+<blockquote>
+<p><code>POST /v1/users</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">userController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/user-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/users/'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">userController</span><span class="p">.</span><span class="nx">createUser</span><span class="p">)</span>
+</code></pre>
+<blockquote>
+<p>response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GXivgijQFAU39g"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"brittanyklepfer@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
+<p>This endpoint creates a new user in the database.</p>
+<h3 id='arguments'>Arguments</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>first_name</code> String</td>
+<td>user&#39;s first name.</td>
+</tr>
+<tr>
+<td><code>last_name</code> String</td>
+<td>user&#39;s last name.</td>
+</tr>
+<tr>
+<td><code>email</code> String</td>
+<td>user&#39;s email address.</td>
+</tr>
+<tr>
+<td><code>phone</code> String</td>
+<td>user&#39;s phone number.</td>
+</tr>
+<tr>
+<td><code>password</code> String</td>
+<td>user&#39;s password.</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-a-user'>Retrieve a user</h2>
+<blockquote>
+<p><code>GET /v1/users/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">userController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/user-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/users/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">userController</span><span class="p">.</span><span class="nx">fetchUser</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GXivgijQFAU39g"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"brittanyklepfer@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Retrieves the details of an existing user. You need only supply the unique user identifier that was returned upon user creation.</p>
+<h3 id='arguements'>Arguements</h3>
+<p><code>no arguments</code></p>
+<h3 id='returns'>Returns</h3>
+<p>Returns a user object if a valid identifier was provided. When requesting the ID of a user that has been deleted, a subset of the users’s information will be returned, including a deleted property, which will be true.</p>
+<h2 id='update-a-user'>Update a user</h2>
+<blockquote>
+<p><code>PUT /v1/users/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">userController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/user-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/users/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">userController</span><span class="p">.</span><span class="nx">updateUser</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GXivgijQFAU39g"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"brittanyklepfer@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates the specified user by setting the values of the parameters passed. Any parameters not provided will be left unchanged</p>
+<h3 id='arguements-2'>Arguements</h3>
+<p><code>Any argument listed in the object definition</code></p>
+<h3 id='returns-2'>Returns</h3>
+<p>Returns the user object if the update succeeded. Throws an error if update parameters are invalid (e.g. specifying an invalid coupon or an invalid source).</p>
+<h2 id='delete-a-user'>Delete a user</h2>
+<blockquote>
+<p><code>Delete /v1/users/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">userController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/user-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/users/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">userController</span><span class="p">.</span><span class="nx">deleteUser</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GY90URwhYx9Oy5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Permanently deletes a user. It cannot be undone. Also immediately cancels any active bookings on the customer.</p>
+<h3 id='arguements-3'>Arguements</h3>
+<p><code>none</code></p>
+<h3 id='returns-3'>Returns</h3>
+<p>Returns an object with a deleted parameter on success. If the user ID does not exist, this call throws an error.
+Unlike other objects, deleted users can still be retrieved through the API, in order to be able to track the history of users while still removing their credit card details and preventing any further operations to be performed (such as adding a new bookings).</p>
+<h2 id='list-all-users'>List all users</h2>
+<blockquote>
+<p><code>GET /v1/users/</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">userController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/user-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/users'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">userController</span><span class="p">.</span><span class="nx">fetchUsers</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/users"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customerId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GXivgijQFAU39g"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"brittanyklepfer@gmail.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Returns a list of your users. The users are returned sorted by creation date, with the most recent user appearing first.</p>
+<h3 id='arguements-4'>Arguements</h3>
+<p><code>none</code></p>
+<h3 id='returns-4'>Returns</h3>
+<p>A object with a data property that contains an array of up to limit customers, starting after user starting_after. Passing an optional email will result in filtering to users with only that exact email address. Each entry in the array is a separate user object. If no more customers are available, the resulting array will be empty. This request should never throw an error.</p>
+<h1 id='valets'>Valets</h1>
+<blockquote>
+<p>Endpoints:</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code>     <span class="nx">GET</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">valets</span>
+    <span class="nx">POST</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">valets</span>
+     <span class="nx">GET</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">valets</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+     <span class="nx">PUT</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">valets</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+  <span class="nx">DELETE</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">valets</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+</code></pre>
+<p>The <code>Valet</code> is used to update bookings and alert users</p>
+<h2 id='the-valet-object'>The valet object</h2>
+<blockquote>
+<p>A sample response for a valet object:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7e1d0e574a8ba27f945a61eF"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h3 id='attributes-2'>Attributes</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>_id</code> String</td>
+<td>Unique identifier for the user object.</td>
+</tr>
+<tr>
+<td><code>user</code> String</td>
+<td>The user object associated with the Valet object</td>
+</tr>
+<tr>
+<td><code>createdAt</code> Date</td>
+<td>Time valet object was created</td>
+</tr>
+<tr>
+<td><code>updatedAt</code> Date</td>
+<td>Time valet object was last updated</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-valet'>Create a valet</h2>
+<blockquote>
+<p><code>POST /v1/valets</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">valetController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/valet-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/valet/'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">valetController</span><span class="p">.</span><span class="nx">createValet</span><span class="p">)</span>
+</code></pre>
+<blockquote>
+<p>response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new valet in the database.</p>
+<h3 id='arguments-2'>Arguments</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>user</code> String</td>
+<td>The user object associated with the valet.</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-a-valet'>Retrieve a valet</h2>
+<blockquote>
+<p><code>GET /v1/valets/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">valetController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/valet-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/valets/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">valetController</span><span class="p">.</span><span class="nx">fetchValet</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Retrieves the details of an existing valet. You need only supply the unique valet identifier that was returned upon valet creation.</p>
+<h3 id='arguements-5'>Arguements</h3>
+<p><code>no arguments</code></p>
+<h3 id='returns-5'>Returns</h3>
+<p>Returns a valet object if a valid identifier was provided. When requesting the ID of a valet that has been deleted, a subset of the users’s information will be returned, including a deleted property, which will be true.</p>
+<h2 id='update-a-valet'>Update a valet</h2>
+<blockquote>
+<p><code>PUT /v1/valets/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">valetController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/valet-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/valets/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">valetController</span><span class="p">.</span><span class="nx">updateValet</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates the specified valet by setting the values of the parameters passed. Any parameters not provided will be left unchanged</p>
+<h3 id='arguements-6'>Arguements</h3>
+<p><code>Any argument listed in the object definition</code></p>
+<h3 id='returns-6'>Returns</h3>
+<p>Returns the valet object if the update succeeded. Throws an error if update parameters are invalid (e.g. specifying an invalid coupon or an invalid source).</p>
+<h2 id='delete-a-valet'>Delete a valet</h2>
+<blockquote>
+<p><code>Delete /v1/valets/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">valetController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/user-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/users/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">valetController</span><span class="p">.</span><span class="nx">deleteValet</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GY90URwhYx9Oy5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"valet"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Permanently deletes a valet. It cannot be undone. Also immediately cancels any active bookings on the valet.</p>
+<h3 id='arguements-7'>Arguements</h3>
+<p><code>none</code></p>
+<h3 id='returns-7'>Returns</h3>
+<p>Returns an object with a deleted parameter on success. If the valet ID does not exist, this call throws an error.
+Unlike other objects, deleted valets can still be retrieved through the API, in order to be able to track the history of valet while still removing their credit card details and preventing any further operations to be performed (such as adding a new bookings).</p>
+<h2 id='list-all-valets'>List all valets</h2>
+<blockquote>
+<p><code>GET /v1/valets/</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">valetController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/valet-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/valets'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">valetController</span><span class="p">.</span><span class="nx">fetchValets</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/valets"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Returns a list of your valets. The valets are returned sorted by creation date, with the most recent user appearing first.</p>
+<h3 id='arguements-8'>Arguements</h3>
+<p><code>none</code></p>
+<h3 id='returns-8'>Returns</h3>
+<p>A object with a data property that contains an array of up to limit valats, starting after valet starting_after. Passing an optional email will result in filtering to users with only that exact email address. Each entry in the array is a separate valet object. If no more customers are available, the resulting array will be empty. This request should never throw an error.</p>
+<h1 id='bookings'>Bookings</h1>
+<blockquote>
+<p>Endpoints:</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code>     <span class="nx">GET</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">bookings</span>
+    <span class="nx">POST</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">bookings</span>
+     <span class="nx">GET</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">bookings</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+     <span class="nx">PUT</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">bookings</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+  <span class="nx">DELETE</span>  <span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">bookings</span><span class="o">/</span><span class="p">:</span><span class="nx">id</span>
+</code></pre>
+<p>The <code>Booking</code> is the object that both users and valets will interact with</p>
+<h2 id='the-booking-object'>The booking object</h2>
+<blockquote>
+<p>A sample response for a booking object:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7e1d0e574a8ba27f945a61eF"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"valet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7e1d0e574a8ba27f945a61eF"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"airport"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSP"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"flight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DL5899"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"make"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toyota"</span><span class="p">,</span><span class="w"> </span><span class="s2">"model"</span><span class="p">:</span><span class="s2">"Camry"</span><span class="p">,</span><span class="w"> </span><span class="s2">"plate"</span><span class="p">:</span><span class="s2">"txp120"</span><span class="p">,</span><span class="w"> </span><span class="s2">"color"</span><span class="p">:</span><span class="s2">"black"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"dropOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"droppedOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickedUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.00</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre><h3 id='attributes-3'>Attributes</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>_id</code> String</td>
+<td>Unique identifier for the booking object.</td>
+</tr>
+<tr>
+<td><code>user</code> String</td>
+<td>The user object that creates the booking</td>
+</tr>
+<tr>
+<td><code>valet</code> String</td>
+<td>The valet object that is assigned to the booking</td>
+</tr>
+<tr>
+<td><code>status</code> Int</td>
+<td>The status of the booking (pending, confirmed, cancelled)</td>
+</tr>
+<tr>
+<td><code>airport</code> String</td>
+<td>The departure airport</td>
+</tr>
+<tr>
+<td><code>flight</code> String</td>
+<td>The airline departure flight number</td>
+</tr>
+<tr>
+<td><code>car</code> {String: String}</td>
+<td>The car the user listed under booking</td>
+</tr>
+<tr>
+<td><code>dropOffAt</code> Date</td>
+<td>The time the user expects to dropp off the vehicle with the valet</td>
+</tr>
+<tr>
+<td><code>pickupAt</code> Date</td>
+<td>The time the user expects to pick up his/her car from the valet</td>
+</tr>
+<tr>
+<td><code>droppedOffAt</code> Date</td>
+<td>The actual time the user drops off vehicle with valet</td>
+</tr>
+<tr>
+<td><code>pickedUpAt</code> Date</td>
+<td>The actuall time the user picked up his/her vehicle from the valet</td>
+</tr>
+<tr>
+<td><code>total</code> Int</td>
+<td>The total cost of the booking</td>
+</tr>
+</tbody></table>
+<h2 id='create-a-booking'>Create a booking</h2>
+<blockquote>
+<p><code>POST /v1/bookings</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">bookingController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/booking-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/bookings/'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">bookingController</span><span class="p">.</span><span class="nx">createBooking</span><span class="p">)</span>
+</code></pre>
+<blockquote>
+<p>response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"airport"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSP"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"flight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DL5899"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"make"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toyota"</span><span class="p">,</span><span class="w"> </span><span class="s2">"model"</span><span class="p">:</span><span class="s2">"Camry"</span><span class="p">,</span><span class="w"> </span><span class="s2">"plate"</span><span class="p">:</span><span class="s2">"txp120"</span><span class="p">,</span><span class="w"> </span><span class="s2">"color"</span><span class="p">:</span><span class="s2">"black"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"dropOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"droppedOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickedUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.00</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint creates a new booking in the database.</p>
+<h3 id='arguments-3'>Arguments</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>user</code> String</td>
+<td>The user object that created the booking.</td>
+</tr>
+<tr>
+<td><code>airport</code> String</td>
+<td>The departure airport</td>
+</tr>
+<tr>
+<td><code>flight</code> String</td>
+<td>The departure flight number</td>
+</tr>
+<tr>
+<td><code>car</code> {String: String}</td>
+<td>The vehicle under the booking</td>
+</tr>
+<tr>
+<td><code>dropOffAt</code> String</td>
+<td>The anicipated drop off time</td>
+</tr>
+<tr>
+<td><code>pickUpAt</code> String</td>
+<td>The anicipated pickup time</td>
+</tr>
+<tr>
+<td><code>total</code> Int</td>
+<td>The total charge for the service</td>
+</tr>
+</tbody></table>
+<h2 id='retrieve-a-booking'>Retrieve a booking</h2>
+<blockquote>
+<p><code>GET /v1/bookings/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">bookingController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/booking-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/bookings/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">bookingController</span><span class="p">.</span><span class="nx">fetchBooking</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"airport"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSP"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"flight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DL5899"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"make"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toyota"</span><span class="p">,</span><span class="w"> </span><span class="s2">"model"</span><span class="p">:</span><span class="s2">"Camry"</span><span class="p">,</span><span class="w"> </span><span class="s2">"plate"</span><span class="p">:</span><span class="s2">"txp120"</span><span class="p">,</span><span class="w"> </span><span class="s2">"color"</span><span class="p">:</span><span class="s2">"black"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"dropOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"droppedOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickedUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.00</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Retrieves the details of an existing booking. You need only supply the unique booking identifier that was returned upon valet creation.</p>
+<h3 id='arguements-9'>Arguements</h3>
+<p><code>no arguments</code></p>
+<h3 id='returns-9'>Returns</h3>
+<p>Returns a booking object if a valid identifier was provided. When requesting the ID of a valet that has been deleted, a subset of the booking information will be returned, including a deleted property, which will be true.</p>
+<h2 id='update-a-booking'>Update a booking</h2>
+<blockquote>
+<p><code>PUT /v1/bookings/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">bookingController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/booking-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/valets/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">bookingController</span><span class="p">.</span><span class="nx">updateBooking</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"airport"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSP"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"flight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DL5899"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"make"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toyota"</span><span class="p">,</span><span class="w"> </span><span class="s2">"model"</span><span class="p">:</span><span class="s2">"Camry"</span><span class="p">,</span><span class="w"> </span><span class="s2">"plate"</span><span class="p">:</span><span class="s2">"txp120"</span><span class="p">,</span><span class="w"> </span><span class="s2">"color"</span><span class="p">:</span><span class="s2">"black"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"dropOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"droppedOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickedUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.00</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Updates the specified booking by setting the values of the parameters passed. Any parameters not provided will be left unchanged</p>
+<h3 id='arguements-10'>Arguements</h3>
+<p><code>Any argument listed in the object definition with an action argument</code> </p>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>claim</code></td>
+<td>A valet claims a booking.</td>
+</tr>
+<tr>
+<td><code>cancel</code></td>
+<td>The user cancels a booking.</td>
+</tr>
+<tr>
+<td><code>dropOff</code></td>
+<td>The user exchanges key to valet, valet drives off and parks the car</td>
+</tr>
+<tr>
+<td><code>pickup</code> String</td>
+<td>The user grabs car from valet and drives off</td>
+</tr>
+</tbody></table>
+<h3 id='returns-10'>Returns</h3>
+<p>Returns the booking object if the update succeeded. Throws an error if update parameters are invalid (e.g. specifying an invalid coupon or an invalid source).</p>
+<h2 id='delete-a-booking'>Delete a booking</h2>
+<blockquote>
+<p><code>Delete /v1/bookings/:id</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">bookingController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/booking-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/bookings/:id'</span><span class="p">)</span>
+        <span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">bookingController</span><span class="p">.</span><span class="nx">deleteBooking</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_GY90URwhYx9Oy5"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"booking"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"deleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Permanently deletes a booking. It cannot be undone. Also immediately cancels any active bookings on the booking.</p>
+<h3 id='arguements-11'>Arguements</h3>
+<p><code>none</code></p>
+<h3 id='returns-11'>Returns</h3>
+<p>Returns an object with a deleted parameter on success. If the valet ID does not exist, this call throws an error.
+Unlike other objects, deleted valets can still be retrieved through the API, in order to be able to track the history of valet while still removing their credit card details and preventing any further operations to be performed (such as adding a new bookings).</p>
+<h2 id='list-all-bookings'>List all bookings</h2>
+<blockquote>
+<p><code>GET /v1/bookings/</code></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript"><code><span class="kd">let</span> <span class="nx">BookingController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'...controllers/booking-controller'</span><span class="p">)</span>
+
+ <span class="nx">app</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">'/api/v1/bookings'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">bookingController</span><span class="p">.</span><span class="nx">fetchBookings</span><span class="p">)</span>
+<span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/bookings"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5e1d0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brittany"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Klepfer"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6518724630"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"deviceToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sdojfd0e574a8ba27f945a61e0"</span><span class="p">,</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"airport"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSP"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"flight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DL5899"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"car"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"make"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Toyota"</span><span class="p">,</span><span class="w"> </span><span class="s2">"model"</span><span class="p">:</span><span class="s2">"Camry"</span><span class="p">,</span><span class="w"> </span><span class="s2">"plate"</span><span class="p">:</span><span class="s2">"txp120"</span><span class="p">,</span><span class="w"> </span><span class="s2">"color"</span><span class="p">:</span><span class="s2">"black"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"dropOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"droppedOffAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pickedUpAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"total"</span><span class="p">:</span><span class="w"> </span><span class="mf">40.00</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"createdAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:41:59.740Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"updatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-01-14T00:42:16.240Z"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"__v"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Returns a list of your bookings. The valets are returned sorted by creation date, with the most recent user appearing first.</p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>field</th>
+<th>description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td><code>userId</code> String</td>
+<td>Filter bookings by userId</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td><code>valetId</code> String</td>
+<td>Filter bookings by valetId</td>
+</tr>
+<tr>
+<td><code>date</code> Date</td>
+<td>Filter bookings by date</td>
+</tr>
+<tr>
+<td><code>status</code> String</td>
+<td>Filter bookings by status</td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
+<h3 id='returns-12'>Returns</h3>
+<p>A object with a data property that contains an array of up to limit bookings, starting after booking starting_after. Passing an optional email will result in filtering to users with only that exact email address. Each entry in the array is a separate valet object. If no more customers are available, the resulting array will be empty. This request should never throw an error.</p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
 This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
